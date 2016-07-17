@@ -3,6 +3,7 @@ from pysparkling import Context
 from datetime import datetime
 import random
 
+
 cluster = Cluster()
 session = cluster.connect('twitterapp')
 tweetsRDD = iter(session.execute("select * from tweet"))
